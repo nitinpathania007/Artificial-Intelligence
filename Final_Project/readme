@@ -25,8 +25,6 @@ SageMaker has two available APIs for building models using built‑in algorithms
 
 The first step will be creating a new Jupyter notebook. Next, we have built the process for obtaining the histopathology images that will be used as input for the image classification algorithm. Then, we are going to explore the images so we have a sense of what it is we are dealing with. And finally, we are going to convert the images to the RecordIO format because that is the most performant solution and then upload to s3.  
 
-Do your own
-
 Now we will be building a model in AWS SageMaker for breast cancer detection using Tensorflow. This means creating a custom algorithm of our own instead of using the built‑in image classification algorithm. By the way, the latest version of Tensorflow supported by the SageMaker Python SDK is 1.12.0. Please remember, it's recommended to use the latest supported version of Tensorflow, because that's where AWS focuses most of its development efforts. 
 
 The process we're going to follow for building a Tensorflow model in SageMaker is the following. First, we're going to transform the input images to the TFRecord format, which, like the RecordIO format we have discussed before, is more efficient for training. Then we're going to prepare a training  script. And finally, we're going to build a model using the Tensorflow estimator provided by the SageMaker Python SDK. 
